@@ -24,40 +24,47 @@ function move(){
     }
 
     isWiner();
-    if(winer == true) gameOver();
+    gameOver();
 }
 
 
 function gameOver(){
 
-    let divEmpty = document.querySelector('.empty');
-    divEmpty.id = 'gameOver';
+    if(winer == true){
+        let divEmpty = document.querySelector('.empty');
+        divEmpty.id = 'gameOver';
 
-    let divTrack = document.createElement('div');
-    divTrack.id = 'track';
+        let divTrack = document.createElement('div');
+        divTrack.id = 'track';
 
-    let h2 = document.createElement('h2');
-    h2.innerHTML = 'Fim de Jogo'
+        let h2 = document.createElement('h2');
+        h2.innerHTML = 'Fim de Jogo'
 
-    let divRestartButtom = document.createElement('div');
-    divRestartButtom.id = 'restartButtom';
-    divRestartButtom.innerHTML = 'Reiniciar Partida'
+        let divRestartButtom = document.createElement('div');
+        divRestartButtom.id = 'restartButtom';
+        divRestartButtom.innerHTML = 'Reiniciar Partida'
 
-    divEmpty.appendChild(divTrack);
+        divEmpty.appendChild(divTrack);
 
-    divTrack.appendChild(h2);
-    divTrack.appendChild(divRestartButtom);
+        divTrack.appendChild(h2);
+        divTrack.appendChild(divRestartButtom);
 
-    restartButtom.addEventListener('click', () => {restart()})
+        restartButtom.addEventListener('click', () => {restart()})
+    }
 }
 
 function restart(){
-    //limpar elementos e reinicar jogo;
+    //limpar tela de game over
     let divEmpty = document.querySelector('.empty');
     divEmpty.innerHTML = '';
     divEmpty.id = '';
 
-    //zerar array
-    //retirar elementos
+    //zerar array e retirar elementos
+    for(i=0; i < squaresColection.length; i++){
 
+        squaresColection[i] = '';
+        squares[i].innerHTML = '';
+    }
+    //retorna winer false
+    return winer = false;
 }
