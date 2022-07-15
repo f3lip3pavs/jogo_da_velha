@@ -39,8 +39,14 @@ h2{
     bottom: 0;
     background-color: rgb(255, 255, 255, 0.2);
     display: inline;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
+}
+
+#restartButtom:hover{
+    padding: 12px;
+    font-size: 21px;
+    transition: 0.3s;
 }
 
 h1{
@@ -58,6 +64,11 @@ h1{
     height: 200px;
     background-color: white;
     cursor: pointer;
+}
+
+.square:hover{
+    background-color: #ddd;
+    transition: .6s;
 }
 
 .x::after{
@@ -86,5 +97,4 @@ h1{
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 200px;
-
 }
