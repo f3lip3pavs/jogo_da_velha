@@ -1,3 +1,5 @@
+<h6>---------------------Projeto em desenvolvimento---------------------</h6>
+
 # Projeto Jogo da velha
 
 ### Este projeto tem como objetivo por em pratica conceitos de programação aprendidos durante os estudos das tecnologias Java Script, HTML e CSS.
